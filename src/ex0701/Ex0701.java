@@ -27,27 +27,29 @@ package ex0701;
 public class Ex0701 {
     /** Main method. */
     public static void main(String[] args) {
+        // Create a Scanner
         java.util.Scanner input = new java.util.Scanner(System.in);
-        // Prompt the user to enter number of students.
-        System.out.print("Enter the number of students: ");
+        // Prompt the user to enter number of students
+        System.out.print("Enter number of students: ");
         int[] score = new int[input.nextInt()];
         char[] grade = new char[score.length];
-        // Prompt the user to enter all scores;
+        // Prompt the user to enter score
         System.out.print("Enter " + score.length + " scores: ");
         for (int i = 0; i < score.length; i++) {
             score[i] = input.nextInt();
         }
         
         // Get student score
-        getStudentScore(score, grade);
+        getStudentsScore(score, grade);
         
+        // Display result
         for (int i = 0; i < score.length; i++) {
             System.out.println("Student " + i + " score " + score[i] +
                     " and grade is " + grade[i]);
         }
     }
     
-    /** Method to get max result. */
+    /** Method to get the max result. */
     public static int max(int[] array) {
         int max = array[0];
         for (int i = 0; i < array.length; i++) {
@@ -57,10 +59,10 @@ public class Ex0701 {
     }
     
     /** Method to calculate student's score. */
-    public static void getStudentScore(int[] score, char[] grade) {
-        int best = max(score);       
+    public static void getStudentsScore(int[] score, char[] grade) {
+        int best = max(score);
         for (int i = 0; i < score.length; i++) {
-        if (score[i] >= best - 10) {
+            if (score[i] >= best - 10) {
                 grade[i] = 'A';
             } else if (score[i] >= best - 20) {
                 grade[i] = 'B';
@@ -70,7 +72,7 @@ public class Ex0701 {
                 grade[i] = 'D';
             } else {
                 grade[i] = 'F';
-           }
+            }
         }
     }
 }
