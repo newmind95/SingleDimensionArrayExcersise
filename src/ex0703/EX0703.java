@@ -24,37 +24,37 @@ package ex0703;
 public class EX0703 {
     /** Main method. */
     public static void main(String[] args) {
-        int[] array = new int[100];
+        int[] number = new int[100];
         int[] count = new int[100];
-        int temp = 0;
-        // Prompt the user to enter integers between 1 and 100.
+        int temp = 0;         // Initial is 0.
+        // Prompt the user to enter integerse between 1 and 100
         System.out.print("Enter integers between 1 and 100: ");
         
-        // Find the occurrence
-        occurrence(array);
-        // Display result.
-        for (int i = 0; i < array.length; i++) {
-            temp = array[i];
+        // read the numbers
+        occurrence(number);
+        // Display result
+        for (int i = 0; i < number.length; i++) {
+            temp = number[i];
             count[temp]++;
         }
-        for (int i = 1; i < count.length; i++) {
-            if (count[i] > 0 && count[i] == 1) {
+        for (int i = 1; i < number.length; i++) {
+            if (number[i] > 0 && number[i] == 1) {
                 System.out.printf("%d occurs %d time%n", i, count[i]);
-            } else if (count[i] >= 2) {
-                System.out.printf("%d occurs %d times%n", i, count[i]);
+            } else if (number[i] >= 2) {
+                System.out.printf("%d occurs %d times%", i, count[i]);
             }
         }
     }
     
-    /** Method to count the occurrence of numbers. */
-    public static void occurrence(int[] array) {
-        // Create a Scanner.
+    /* Method to read the numbers. */
+    public static void occurrence(int[] array) {      
+        // Create a Scanner
         java.util.Scanner input = new java.util.Scanner(System.in);
         for (int i = 0; i < array.length; i++) {
             array[i] = input.nextInt();
             if (array[i] == 0) {
                 break;
             }
-        }       
+        }
     }
 }
