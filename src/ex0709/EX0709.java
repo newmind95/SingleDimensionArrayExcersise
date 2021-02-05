@@ -33,8 +33,8 @@ public class EX0709 {
     
     /** Method to find the smallest element in an array of doubles. */
     public static double min(double[] array) {
-        double min = array[0];         // Initial is 0.
-        for (int i = 1; i < array.length; i++) {
+        double min = array[0];             // Initial is 0.
+        for (int i = 0; i < array.length; i++) {
             if (array[i] < min) {
                 min = array[i];
             }
