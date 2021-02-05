@@ -26,22 +26,22 @@ public class EX0705 {
         java.util.Scanner input = new java.util.Scanner(System.in);
         int[] array = new int[10];
         int num;
-        int count = 0;
+        int count = 0;                // Initial is 0.
         // Prompt the user to enter ten integers.
         System.out.print("Enter ten integers: ");
         for (int i = 0; i < 10; i++) {
             num = input.nextInt();
-            // Test if num is dinstinct
+            
             if (isDistinct(array, num)) {
                 array[count] = num;
-                count++;
+                count++;                    // Increment count.
             }
         }
         // Display results.
         System.out.println("The number of distinct is: " + count);
-        System.out.print("The distinct numbers are: ");
+        System.out.print("The distinct numbers are:");
         for (int i = 0; i < array.length; i++) {
-            if (array[i] > 0) 
+            if (array[i] > 0)
                 System.out.print(" " + array[i]);
         }
         System.out.println();
@@ -49,11 +49,11 @@ public class EX0705 {
     
     /** Method to check whether a number is distinct. */
     public static boolean isDistinct(int[] array, int num) {
-        for (int i = 0; i < array.length; i++) {
-            if (num == array[i])
-                return false;       // If number is is not in an array return false.
-        }
-        // Otherwise return true.
-        return true;
+       for (int i = 0; i < array.length; i++) {
+           if (num == array[i])
+               return false;          // If number is not in an array return false.
+       }
+       // Otherwise return true;
+       return true;
     }
 }
