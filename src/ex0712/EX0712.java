@@ -18,6 +18,7 @@ public class EX0712 {
         // Create a Scanner
         java.util.Scanner input = new java.util.Scanner(System.in);
         int[] list1 = new int[10];
+        // Prompt the user to enter ten numbers.
         System.out.print("Enter ten numbers: ");
         for (int i = 0; i < list1.length; i++) {
             list1[i] = input.nextInt();
@@ -33,7 +34,7 @@ public class EX0712 {
     /** Method to reverse an array. */
     public static int reverse(int[] array) {
         int temp = 0;
-        for (int i = 0, j = array.length - 1; i < array.length; i++, j--) {
+        for (int i = 0, j = array.length - 1; i < array.length / 2; i++, j--) {
             temp = array[i];
             array[i] = array[j];
             array[j] = temp;
